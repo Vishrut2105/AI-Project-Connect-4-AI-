@@ -85,14 +85,3 @@ For sliding 4-slot windows:
 - 3 Opponent tokens + 1 Empty: $-140$ (Defensive Emergency Block)
 
 ---
-
-## 6. Viva Questions & Answers
-
-**Q1: Why did you choose Connect-4 instead of Tic-Tac-Toe?**  
-*Answer:* Tic-Tac-Toe has a very small search tree where full depth can be searched in milliseconds. Connect-4 has over 4.5 trillion states, requiring depth-limited search with a heuristic evaluation function and Alpha-Beta pruning, which better reflects real-world adversarial search.
-
-**Q2: What is the purpose of Alpha-Beta pruning?**  
-*Answer:* It eliminates branches in the game search tree that cannot possibly affect the final decision, allowing the AI to search deeper within the same time limit.
-
-**Q3: Why do we explore the center column first in our move list?**  
-*Answer:* Move ordering is critical for Alpha-Beta pruning. The center column provides the strongest tactical advantage and highest scores. By checking the best moves first, the $\alpha$ value rises rapidly, triggering cutoffs in subsequent branches much earlier.
